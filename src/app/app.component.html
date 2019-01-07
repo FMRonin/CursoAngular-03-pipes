@@ -115,6 +115,42 @@
                 <td>async</td>
                 <td>{{ valorDePromesa | async }}</td>
             </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{fecha}}</td>
+                <td>date</td>
+                <td>{{ fecha | date }}</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{fecha}}</td>
+                <td>date</td>
+                <td>{{ fecha | date:'medium' }}</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{fecha}}</td>
+                <td>date</td>
+                <td>{{ fecha | date:'MMMM - dd' }}</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{nombre2}}</td>
+                <td>capitalizado</td>
+                <td>{{ nombre2 | capitalizado:1:2:3 }}</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{password}}</td>
+                <td>maskPassword</td>
+                <td>{{ password | maskPassword }}</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{password}}</td>
+                <td>maskPassword:{{isMask}} <button (click)="ToggleMask()" class="btn btn-outline-primary">Activar Enmascaramiento</button></td>
+                <td>{{ password | maskPassword:isMask }}</td>
+            </tr>
 
         </tbody>
     </table>
@@ -135,5 +171,9 @@
 
     <br>
     <hr>
+
+    <h2>YouTube</h2>
+
+    <iframe width="560" height="315" [src]="urlCode | safeBrowser:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>

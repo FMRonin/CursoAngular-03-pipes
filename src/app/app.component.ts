@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'pipes';
 
   nombre = 'Fabian';
+  nombre2 = "fabiAn esTeban";
 
   arreglo = [0,1,2,3,4,5];
 
@@ -34,5 +35,19 @@ export class AppComponent {
 
   valorDePromesa = new Promise((resolve, reject) => {
     setTimeout(()=>resolve('Llego la data'),3500);
-  })
+  });
+
+  fecha = new Date();
+
+  urlCode = "ywaakV6HxHY";
+
+  isMask:boolean = false;
+
+  ToggleMask(){
+    this.isMask=!this.isMask;
+  }
+
+  password = "Password123";
+
+
 }
